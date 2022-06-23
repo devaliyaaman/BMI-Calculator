@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .imgl img {
+            height: 500px;
+            width: 300px;
+            padding: 1.2em;
+            margin: 0.5em 0.5em;
+        }
+
+        .imgr img {
+            height: 500px;
+            width: 300px;
+            padding: 1.2em;
+            margin: 0.5em 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="width:70% ;">
+                <h2><strong>BMI Calculator</strong></h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" role="search" style="float:right;">
+                    <input class="form-control me-2" type="search" placeholder="Search here !!" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="d-sm-flex">
+        <div class="imgl"><img src="fat.jpg" alt=""></div>
+        <div class="container">
+            <form name="myForm" action="noaction">
+
+                <div class="box">
+                    Age : <input type="number" placeholder="Age in years">
+                </div>
+                <div class="box" id="weight">
+                    Weight : <input type="tel" name="weight" placeholder="Weight in kg">
+                </div>
+                <div class="box" id="height">
+                    Height : <input type="text" name="height" placeholder="Height in m">
+                </div>
+                <div class="box">
+                    <button class=" btn btn-outline-warning" id="btnc" onclick="showbmi()"><a
+                            href="#">Calculate</a></button>
+                </div>
+                <!-- <div class="box">
+                <button class="btn" id="btn" onclick="showbmi()"><input type="submit" value="Calculate"></button>
+            </div> -->
+                <div class="box" id="bmi">
+                    Your BMI :
+                    <div id="bmic"> </div>
+                </div>
+            </form>
+        </div>
+        <div class="imgr"><img src="thin.jpg" alt=""></div>
+    </div>
+    <hr>
+
+    <div class="data">
+
+        <div class="table">
+            <h3>BMI table for adults</h3>
+            <p>This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults.
+                It is used for both men and women, age 18 or older.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>BMI range - kg/m2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Severe Thinness</td>
+                        <td> &lt; 16</td>
+                    </tr>
+                    <tr>
+                        <td>Moderate Thinness
+                        <td>16 - 17</td>
+                    </tr>
+                    <tr>
+                        <td>Mild Thinness</td>
+                        <td>17 - 18.5</td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>18.5 - 25</td>
+                    </tr>
+                    <tr>
+                        <td>Overweight</td>
+                        <td>25 - 30</td>
+                    </tr>
+                    <tr>
+                        <td>Obese Class I</td>
+                        <td>30 - 35</td>
+                    </tr>
+                    <tr>
+                        <td>Obese Class II</td>
+                        <td>35 - 40</td>
+                    </tr>
+                    <tr>
+                        <td>Obese Class III</td>
+                        <td>&gt40</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="ben">
+            <h3>Risks associated with being overweight</h3>
+            <p>Being overweight increases the risk of a number of serious diseases and health conditions. Below is a
+                list of said risks, according to the Centers for Disease Control and Prevention (CDC):</p>
+            <ul>
+                <li>High blood pressure </li>
+
+                <li>Higher levels of LDL cholesterol, which is widely considered "bad cholesterol," lower levels of HDL
+                    cholesterol, considered to be good cholesterol in moderation, and high levels of triglycerides</li>
+
+                <li>Coronary heart disease</li>
+
+                <li> Stroke</li>
+
+                <li> Gallbladder disease</li>
+
+                <li> Osteoarthritis, a type of joint disease caused by breakdown of joint cartilage</li>
+
+                <li>Sleep apnea and breathing problems</li>
+
+                <li>Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver)</li>
+
+                <li> Low quality of life</li>
+
+                <li>Mental illnesses such as clinical depression, anxiety, and others
+                    Body pains and difficulty with certain physical functions</li>
+
+                <li>Generally, an increased risk of mortality compared to those with a healthy BMI</li>
+
+                <li>Type II diabetes</li>
+            </ul>
+            <h3>Risks associated with being underweight</h3>
+            <p>Being underweight has its own associated risks, listed below:</p>
+            <li>Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)</li>
+            <li>Potential complications as a result of surgery</li>
+            <li>Growth and development issues, particularly in children and teenagers</li>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid foot">
+            Copyright &copy; devaliyaaman. All Rights reserved !
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+<script>
+    function showbmi() {
+        let weight = document.forms["myForm"]["weight"].value;
+        let height = document.forms["myForm"]["height"].value;
+        // let weight = document.getElementById('weight');
+        // let height = document.getElementById('height');
+        // let bmi = document.getElementById('bmi');
+        let BMI = (weight / (height * height)).toFixed(2);
+        bmic.innerHTML = BMI;
+        // if(BMI>18.55 && BMI<25){
+        //     prompt("Your BMI is" , BMI)
+        //     confirm("Your are Normal");
+        // }
+        // if(BMI>25){
+        //     prompt("Your BMI is" , BMI)
+        //     confirm("Your are Overweight");
+        // }
+        // if(BMI<18.55){
+        //     prompt("Your BMI is" , BMI)
+        //     confirm("Your are Underweight");
+        // }
+    }
+    // javascript code runs here for more information visit our website www.amandevaliya.com
+
+</script>
+
+</html>
